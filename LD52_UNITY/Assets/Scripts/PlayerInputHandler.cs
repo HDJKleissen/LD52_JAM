@@ -7,17 +7,22 @@ public class PlayerInputHandler : MonoBehaviour
     public PlayerController controller;
 
     Vector2 movementInput;
+    public float Deadzone;
+
 
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
     void Update()
     {
         Vector2 newMovementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        if(newMovementInput.magnitude < Deadzone)
+        {
+            newMovementInput = Vector2.zero;
+        }
 
         if (movementInput == Vector2.zero && newMovementInput != Vector2.zero)
         {
