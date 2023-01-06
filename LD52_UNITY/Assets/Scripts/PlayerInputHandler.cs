@@ -29,7 +29,7 @@ public class PlayerInputHandler : MonoBehaviour
         }
         else if (movementInput != Vector2.zero && newMovementInput == Vector2.zero)
         {
-            controller.HandleMovementRelease(newMovementInput);
+            controller.HandleMovementRelease(movementInput);
         }
 
         movementInput = newMovementInput;

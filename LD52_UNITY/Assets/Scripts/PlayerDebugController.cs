@@ -30,9 +30,9 @@ public class PlayerDebugController : PlayerController
         Debug.Log("Movement pressed: " + input);
     }
 
-    public override void HandleMovementRelease(Vector2 input)
+    public override void HandleMovementRelease(Vector2 lastInput)
     {
-        Debug.Log("Movement released: " + input);
+        Debug.Log("Movement released, last input: " + lastInput);
     }
 
     // Start is called before the first frame update
