@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class MousePlayerController : PlayerController
 {
+    public FollowTarget FollowTarget;
     public float MoveSpeed = 8f;
-
+    float speedModifier = 1;
     public override void HandleActionHeld()
     {
     }
 
     public override void HandleActionPress()
     {
-        
+        speedModifier = 2;
+        FollowTarget.Steps /= 2;
     }
 
     public override void HandleActionRelease()
     {
-        
+        speedModifier = 1;
+        FollowTarget.Steps = FollowTarget.BaseSteps;
     }
 
     public override void HandleMovementPress(Vector2 input)
@@ -27,7 +30,7 @@ public class MousePlayerController : PlayerController
 
     public override void HandleMovementHeld(Vector2 input)
     {
-        Movement = input * MoveSpeed;
+        Movement = input * MoveSpeed * speedModifier;
     }
 
     public override void HandleMovementRelease(Vector2 lastInput)

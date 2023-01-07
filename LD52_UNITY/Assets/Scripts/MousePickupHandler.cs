@@ -33,5 +33,10 @@ public class MousePickupHandler : MonoBehaviour
             TargetFollower follower = mouse.GetComponent<TargetFollower>();
             followTarget.AddFollower(follower);
         }
+        if (collision.GetComponent<EnemyAttack>() != null)
+        {
+            // TODO: Move to seperate class and attach level end
+            Destroy(gameObject);
+        }
     }
 }

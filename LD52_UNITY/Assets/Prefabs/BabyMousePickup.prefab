@@ -94,7 +94,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6634217388043161456}
   - component: {fileID: 6634217388043161463}
-  - component: {fileID: 2069668891318116213}
+  - component: {fileID: 1743900166614916644}
   m_Layer: 0
   m_Name: BabyMousePickup
   m_TagString: Untagged
@@ -116,7 +116,7 @@ Transform:
   m_Children:
   - {fileID: 6634217387837119269}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &6634217388043161463
 CapsuleCollider2D:
@@ -153,7 +153,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 2}
   m_Direction: 0
---- !u!114 &2069668891318116213
+--- !u!114 &1743900166614916644
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

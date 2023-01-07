@@ -12,6 +12,8 @@ public class FollowTarget : MonoBehaviour
 
     List<TargetFollower> followers = new List<TargetFollower>();
 
+    public int BaseSteps = 10;
+
     public int Steps = 10;
     int maxSteps = 0;
 

@@ -54,4 +54,9 @@ public class TargetFollower : MonoBehaviour
             body.position = Vector2.Lerp(body.position, Destination, MoveLerpValue);
         }
     }
+
+    private void OnDestroy()
+    {
+        Leader.RemoveFollower(this);
+    }
 }

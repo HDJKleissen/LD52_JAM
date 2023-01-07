@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BabyMouse : MonoBehaviour
 {
+    FollowTarget MomMouse;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +16,13 @@ public class BabyMouse : MonoBehaviour
     void Update()
     {
         
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.GetComponent<EnemyAttack>() != null)
+        {
+            Destroy(gameObject);
+        }
     }
 }

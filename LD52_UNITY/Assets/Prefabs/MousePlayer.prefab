@@ -150,7 +150,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 8589290047652658226}
-  MoveSpeed: 8
+  MoveSpeed: 20
 --- !u!50 &8589290047652658226
 Rigidbody2D:
   serializedVersion: 4
@@ -254,4 +254,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 8589290047652658226}
-  Steps: 15
+  Steps: 6

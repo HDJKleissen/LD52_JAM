@@ -1001,6 +1001,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95930f0551fa7d34b9546a224627f51b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  LevelBounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 25, y: 18, z: 0}
+  DoRandom: 0
+  attacks:
+  - AttackPrefab: {fileID: 2575892871767972704, guid: 4fac45a0b5b6a0b43ade6d52127ca3c2, type: 3}
+    MinAttackDelay: 0.2
+    MaxAttackDelay: 0.5
+  - AttackPrefab: {fileID: 2575892871767972704, guid: 4fac45a0b5b6a0b43ade6d52127ca3c2, type: 3}
+    MinAttackDelay: 0.7
+    MaxAttackDelay: 0.9
+  - AttackPrefab: {fileID: 2575892871767972704, guid: 4fac45a0b5b6a0b43ade6d52127ca3c2, type: 3}
+    MinAttackDelay: 1
+    MaxAttackDelay: 2
 --- !u!4 &1607789590
 Transform:
   m_ObjectHideFlags: 0
