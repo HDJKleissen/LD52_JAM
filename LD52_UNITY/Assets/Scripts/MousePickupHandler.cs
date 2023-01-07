@@ -6,7 +6,7 @@ using UnityEngine;
 public class MousePickupHandler : MonoBehaviour
 {
     public GameObject BabyMousePrefab;
-    public List<BabyMouse> babyList = new List<BabyMouse>();
+    public FollowTarget followTarget;
 
     // Start is called before the first frame update
     void Start()
@@ -30,17 +30,8 @@ public class MousePickupHandler : MonoBehaviour
 
             Destroy(mousePickup.gameObject);
 
-            FollowTransform follow = mouse.GetComponent<FollowTransform>();
-            if(babyList.Count < 1)
-            {
-                follow.leader = GetComponent<Rigidbody2D>();
-            }
-            else
-            {
-                follow.leader = babyList.Last().GetComponent<Rigidbody2D>();
-            }
-
-            babyList.Add(mouse);
+            TargetFollower follower = mouse.GetComponent<TargetFollower>();
+            followTarget.AddFollower(follower);
         }
     }
 }
