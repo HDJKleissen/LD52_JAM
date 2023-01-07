@@ -14,13 +14,11 @@ public class MousePlayerController : PlayerController
     public override void HandleActionPress()
     {
         speedModifier = 2;
-        FollowTarget.Steps /= 2;
     }
 
     public override void HandleActionRelease()
     {
         speedModifier = 1;
-        FollowTarget.Steps = FollowTarget.BaseSteps;
     }
 
     public override void HandleMovementPress(Vector2 input)

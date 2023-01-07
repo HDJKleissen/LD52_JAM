@@ -18,23 +18,23 @@ public class PlayerInputHandler : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Vector2 newMovementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical")).normalized;
+        Vector2 newMovementInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         if(newMovementInput.magnitude < Deadzone)
         {
             newMovementInput = Vector2.zero;
         }
 
-        if (movementInput == Vector2.zero && newMovementInput != Vector2.zero)
+        if (movementInput.x == 0 && newMovementInput.x != 0 || movementInput.y == 0 && newMovementInput.y != 0) 
         {
-            controller.HandleMovementPress(newMovementInput);
+            controller.HandleMovementPress(newMovementInput.normalized);
         }
         else if (movementInput != Vector2.zero && newMovementInput != Vector2.zero)
         {
-            controller.HandleMovementHeld(newMovementInput);
+            controller.HandleMovementHeld(newMovementInput.normalized);
         }
         else if (movementInput != Vector2.zero && newMovementInput == Vector2.zero)
         {
-            controller.HandleMovementRelease(movementInput);
+            controller.HandleMovementRelease(movementInput.normalized);
         }
 
         movementInput = newMovementInput;
