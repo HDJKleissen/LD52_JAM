@@ -14,7 +14,10 @@ public class LevelController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        StartCoroutine(Attacks());
+        if (attacks.Count > 0)
+        {
+            StartCoroutine(Attacks());
+        }
     }
 
     // Update is called once per frame
