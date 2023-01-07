@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 95f52735c8b33c542b829e37dee3a147
+guid: 075bda661c918244d81d3a8a6ee300d0
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -107,7 +107,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: mouse_0
+      name: baby_frog_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,14 +121,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 80ef1f9160ce38144ac2eaaddc975489
-      internalID: 653574215
+      spriteID: b50d239ee20482448bf2ee91b2701499
+      internalID: 1981652266
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouse_1
+      name: baby_frog_1
       rect:
         serializedVersion: 2
         x: 512
@@ -142,56 +142,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c992637696fcef844ade82692ff98932
-      internalID: -425924909
+      spriteID: 7e01f5ea487a4e54ca5869049c402cc1
+      internalID: -707366310
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: mouse_2
-      rect:
-        serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9b54e1b78cfac024098c31bf953f918b
-      internalID: 956633180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_3
-      rect:
-        serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 784612e7a9bc1f6468938349acd659c2
-      internalID: 935001861
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_4
+      name: baby_frog_2
       rect:
         serializedVersion: 2
         x: 0
@@ -205,29 +163,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a088eaa541909c04ab4abf97ef376fe6
-      internalID: 666298922
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: mouse_5
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 512
-        height: 512
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 20bb86554b2e55443b972623c4e32da8
-      internalID: 536518381
+      spriteID: 680e0ec6aac031041805b8510db0c16c
+      internalID: 14875329
       vertices: []
       indices: 
       edges: []
@@ -243,12 +180,9 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      mouse_2: 956633180
-      mouse_4: 666298922
-      mouse_0: 653574215
-      mouse_5: 536518381
-      mouse_1: -425924909
-      mouse_3: 935001861
+      baby_frog_1: -707366310
+      baby_frog_0: 1981652266
+      baby_frog_2: 14875329
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
