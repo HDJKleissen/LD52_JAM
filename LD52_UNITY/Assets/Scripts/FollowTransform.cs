@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 [RequireComponent(typeof(Rigidbody2D))]
@@ -14,8 +15,11 @@ public class FollowTransform : MonoBehaviour
     [Range(0, 1f)]
     public float MoveLerpValue = 0.3f;
 
-    private Queue<Vector2> positionRecord = new Queue<Vector2>();
-    private Queue<float> rotationRecord = new Queue<float>();
+    private List<Vector2> positionRecord = new List<Vector2>();
+    private List<float> rotationRecord = new List<float>();
+
+    Vector2 lastPositionRecord;
+    float lastRotationRecord;
 
     public Vector2 Destination;
 
@@ -31,6 +35,11 @@ public class FollowTransform : MonoBehaviour
         Collider2D myCollider = GetComponent<Collider2D>();
         Collider2D leaderCollider = leader.GetComponent<Collider2D>();
 
+        lastPositionRecord = leader.position;
+        lastRotationRecord = leader.rotation;
+        positionRecord.Add(leader.position);
+        rotationRecord.Add(leader.rotation);
+
         minDistance = Mathf.Max(myCollider.bounds.extents.x, myCollider.bounds.extents.y) + Mathf.Max(leaderCollider.bounds.extents.x, leaderCollider.bounds.extents.y);
     }
 
@@ -42,25 +51,35 @@ public class FollowTransform : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (Vector2.Distance(body.position, leader.position) > minDistance)
+        if (leader.position != lastPositionRecord && (positionRecord.Count > 0 && positionRecord.First() != leader.position))
         {
             // record position of leader
-            positionRecord.Enqueue(leader.transform.position);
-            rotationRecord.Enqueue(leader.rotation);
+            positionRecord.Add(leader.position);
         }
+
+        if (leader.rotation != lastRotationRecord && (rotationRecord.Count > 0 && rotationRecord.First() != leader.rotation))
+        {
+            // record rotation of leader
+            rotationRecord.Add(leader.rotation);
+        }
+
         // remove last position from the record and use it for our own
         while (positionRecord.Count > steps)
         {
-            Destination = positionRecord.Dequeue();
+            Destination = positionRecord[0];
+            positionRecord.RemoveAt(0);
         }
         // remove last position from the record and use it for our own
         while (rotationRecord.Count > steps)
         {
-            body.rotation = rotationRecord.Dequeue();
+            body.rotation = rotationRecord[0];
+            rotationRecord.RemoveAt(0);
         }
         if (Vector2.Distance(body.position, Destination) > 0.01f)
         {
             body.position = Vector2.Lerp(body.position, Destination, MoveLerpValue);
         }
+        lastPositionRecord = leader.position;
+        lastRotationRecord = leader.rotation;
     }
 }

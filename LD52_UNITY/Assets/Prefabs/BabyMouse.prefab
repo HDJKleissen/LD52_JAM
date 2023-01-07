@@ -49,8 +49,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 0.0001
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 1000000
+  m_AngularDrag: 1000000
   m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -78,6 +78,9 @@ MonoBehaviour:
   body: {fileID: 1000605414907277291}
   leader: {fileID: 0}
   steps: 15
+  minDistance: 0
+  MoveLerpValue: 0.3
+  Destination: {x: 0, y: 0}
 --- !u!114 &257408883056579790
 MonoBehaviour:
   m_ObjectHideFlags: 0

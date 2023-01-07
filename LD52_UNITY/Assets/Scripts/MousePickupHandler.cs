@@ -22,10 +22,8 @@ public class MousePickupHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Trigger!");
         BabyMousePickup mousePickup = collision.GetComponent<BabyMousePickup>();
 
-        Debug.Log(mousePickup);
         if (mousePickup != null) {
             BabyMouse mouse = Instantiate(BabyMousePrefab).GetComponent<BabyMouse>();
             mouse.transform.position = mousePickup.transform.position;
