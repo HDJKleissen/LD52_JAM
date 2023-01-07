@@ -24,7 +24,7 @@ public class PlayerInputHandler : MonoBehaviour
             newMovementInput = Vector2.zero;
         }
 
-        if (movementInput.x == 0 && newMovementInput.x != 0 || movementInput.y == 0 && newMovementInput.y != 0) 
+        if ((movementInput.x == 0 && newMovementInput.x != 0) || (movementInput.y == 0 && newMovementInput.y != 0))
         {
             controller.HandleMovementPress(newMovementInput.normalized);
         }
