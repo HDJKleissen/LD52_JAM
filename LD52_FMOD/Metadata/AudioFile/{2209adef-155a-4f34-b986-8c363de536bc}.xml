@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{2209adef-155a-4f34-b986-8c363de536bc}">
+		<property name="assetPath">
+			<value>Rustle 04.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>1</value>
+		</property>
+		<property name="length">
+			<value>1</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8419b8bd-2a77-4b12-bcf7-bc90f20f40bd}</destination>
+		</relationship>
+	</object>
+</objects>
