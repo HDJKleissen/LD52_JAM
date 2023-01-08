@@ -28,6 +28,7 @@ public class BabyMouse : MonoBehaviour
         if(collision.GetComponent<EnemyAttack>() != null)
         {
             Destroy(gameObject);
+            // SFX: Baby mouse death
         }
     }
 }

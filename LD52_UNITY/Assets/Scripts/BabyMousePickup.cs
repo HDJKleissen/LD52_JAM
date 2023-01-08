@@ -13,6 +13,14 @@ public class BabyMousePickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<EnemyAttack>() != null)
+        {
+            Destroy(gameObject);
+            // SFX: Baby mouse death
+        }
     }
 }
