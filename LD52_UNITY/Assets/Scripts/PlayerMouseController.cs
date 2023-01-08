@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MousePlayerController : PlayerController
 {
+    public PlayerAnimator PlayerAnimator;
     public FollowTarget FollowTarget;
     public float MoveSpeed = 8f;
     float speedModifier = 1;
@@ -23,7 +24,7 @@ public class MousePlayerController : PlayerController
 
     public override void HandleMovementPress(Vector2 input)
     {
-        
+        PlayerAnimator.SetAnimatorBool("Running", true);
     }
 
     public override void HandleMovementHeld(Vector2 input)
@@ -34,5 +35,6 @@ public class MousePlayerController : PlayerController
     public override void HandleMovementRelease(Vector2 lastInput)
     {
         Movement = Vector2.zero;
+        PlayerAnimator.SetAnimatorBool("Running", false);
     }
 }

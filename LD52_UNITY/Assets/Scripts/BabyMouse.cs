@@ -5,6 +5,9 @@ using UnityEngine;
 public class BabyMouse : MonoBehaviour
 {
     FollowTarget MomMouse;
+    public Animator Animator;
+
+    Vector3 prevPosition;
 
     // Start is called before the first frame update
     void Start()
@@ -15,7 +18,9 @@ public class BabyMouse : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        Animator.speed = prevPosition != transform.position ? 1 : 0;
+
+        prevPosition = transform.position;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

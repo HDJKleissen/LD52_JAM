@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8589290046947378723}
   - component: {fileID: 8589290046947378720}
+  - component: {fileID: 8589290047381925608}
+  - component: {fileID: 8589290047381925609}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -84,6 +86,39 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &8589290047381925608
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8589290046947378722}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 083714a796d36c746b39cd0f4132591b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &8589290047381925609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8589290046947378722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e374d9547b7c04f944db4176c792c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Animator: {fileID: 8589290047381925608}
 --- !u!1 &8589290047652658217
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,7 +156,7 @@ Transform:
   m_Children:
   - {fileID: 8589290046947378723}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &8589290047652658230
 MonoBehaviour:
@@ -150,6 +185,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 8589290047652658226}
+  PlayerAnimator: {fileID: 8589290047381925609}
   FollowTarget: {fileID: 0}
   MoveSpeed: 20
 --- !u!50 &8589290047652658226
@@ -228,6 +264,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 8589290047652658226}
   RotateSpeed: 0.3
+  RotationOffset: 90
 --- !u!114 &8589290047652658238
 MonoBehaviour:
   m_ObjectHideFlags: 0
