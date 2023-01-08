@@ -1261,6 +1261,90 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: tileset_55
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7110ab1af630b844585bc4a05b956384
+      internalID: 1662738312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_56
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 1024
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d6e87ef5e07e5244a53fc3b50e003f9
+      internalID: -1615933826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_57
+      rect:
+        serializedVersion: 2
+        x: 2560
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77014dcc9623cf84886d96b05f5c4e39
+      internalID: 677445823
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tileset_58
+      rect:
+        serializedVersion: 2
+        x: 3072
+        y: 512
+        width: 512
+        height: 512
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00ff6a6844fbd9841907e612423627dd
+      internalID: 254965509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -1300,21 +1384,25 @@ TextureImporter:
       tileset_3: -1709070132
       tileset_43: -423110898
       tileset_23: 1969738915
+      tileset_56: -1615933826
       tileset_38: -1445315602
       tileset_37: -882635887
       tileset_49: -821806262
       tileset_29: -1414962370
       tileset_18: -728949047
       tileset_0: -47456654
+      tileset_58: 254965509
       tileset_22: 276801122
       tileset_39: 88555970
       tileset_1: 1641170453
+      tileset_57: 677445823
       tileset_40: 1392774470
       tileset_47: -1735400566
       tileset_54: -1405303498
       tileset_44: -366559606
       tileset_53: -1189866630
       tileset_15: 564089836
+      tileset_55: 1662738312
       tileset_20: -335955963
       tileset_32: -573958387
       tileset_16: 989275162
