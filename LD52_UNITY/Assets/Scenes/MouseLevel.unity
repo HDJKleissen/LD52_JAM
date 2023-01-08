@@ -5223,7 +5223,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 40, y: 25, z: 0}
+    m_Extent: {x: 35, y: 20, z: 0}
   DoRandom: 0
   attacks:
   - AttackPrefab: {fileID: 2575892871767972704, guid: 4fac45a0b5b6a0b43ade6d52127ca3c2, type: 3}
