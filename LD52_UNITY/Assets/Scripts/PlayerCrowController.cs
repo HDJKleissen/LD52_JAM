@@ -5,7 +5,9 @@ using UnityEngine;
 public class PlayerCrowController : PlayerController
 {
     public float TurnSpeed;
+    public float SlowdownSpeed;
     public float MoveSpeed;
+    public float MinSpeed;
 
     public override void HandleActionHeld()
     {
@@ -41,6 +43,6 @@ public class PlayerCrowController : PlayerController
     // Update is called once per frame
     void Update()
     {
-        
+        Movement = Vector2.Lerp(Movement, Movement.normalized * MinSpeed, SlowdownSpeed);
     }
 }

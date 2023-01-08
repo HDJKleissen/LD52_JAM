@@ -769,17 +769,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ac0b09e7857660247b1477e93731de29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &554263835755955942 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4516179875138616398, guid: 3f8345f8d3100aa4298710c865b856ac, type: 3}
-  m_PrefabInstance: {fileID: 4115610211416537768}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b8a26905ae6e93d46b73aa6bba2c433c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &3112583886819625535
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -853,10 +842,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LizardPlayer
       objectReference: {fileID: 0}
-    - target: {fileID: 4115610211672057968, guid: 3f8345f8d3100aa4298710c865b856ac, type: 3}
-      propertyPath: pickupHandler
-      value: 
-      objectReference: {fileID: 554263835755955942}
     - target: {fileID: 4115610211672057977, guid: 3f8345f8d3100aa4298710c865b856ac, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -901,10 +886,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4516179875138616398, guid: 3f8345f8d3100aa4298710c865b856ac, type: 3}
-      propertyPath: LizardEggPickupPrefab
-      value: 
-      objectReference: {fileID: 3112583886841716861, guid: 6f559777fd7967e40bb9c4f3a341452e, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
