@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: frog_idle
+  m_Name: frog_jump_prep
   serializedVersion: 7
   m_Legacy: 0
   m_Compressed: 0
@@ -21,21 +21,13 @@ AnimationClip:
   - serializedVersion: 2
     curve:
     - time: 0
-      value: {fileID: 1052773689, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
-    - time: 0.6666667
-      value: {fileID: 1717868690, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
-    - time: 0.9166667
-      value: {fileID: 200886161, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
-    - time: 1.1666666
-      value: {fileID: 1717868690, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
-    - time: 1.4166666
-      value: {fileID: 1052773689, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
+      value: {fileID: -1786045853, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
     attribute: m_Sprite
     path: 
     classID: 212
     script: {fileID: 0}
     flags: 2
-  m_SampleRate: 12
+  m_SampleRate: 60
   m_WrapMode: 0
   m_Bounds:
     m_Center: {x: 0, y: 0, z: 0}
@@ -52,17 +44,13 @@ AnimationClip:
       isIntCurve: 0
       isSerializeReferenceCurve: 0
     pptrCurveMapping:
-    - {fileID: 1052773689, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
-    - {fileID: 1717868690, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
-    - {fileID: 200886161, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
-    - {fileID: 1717868690, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
-    - {fileID: 1052773689, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
+    - {fileID: -1786045853, guid: cb942904710aab54b8cd5b48e149a3c9, type: 3}
   m_AnimationClipSettings:
     serializedVersion: 2
     m_AdditiveReferencePoseClip: {fileID: 0}
     m_AdditiveReferencePoseTime: 0
     m_StartTime: 0
-    m_StopTime: 1.5
+    m_StopTime: 0.016666668
     m_OrientationOffsetY: 0
     m_Level: 0
     m_CycleOffset: 0
