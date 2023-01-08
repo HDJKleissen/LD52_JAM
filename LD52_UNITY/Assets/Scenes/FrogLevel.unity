@@ -3790,7 +3790,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   LevelBounds:
     m_Center: {x: 0, y: 0, z: 0}
-    m_Extent: {x: 29.92, y: 16.7, z: 18.2}
+    m_Extent: {x: 35, y: 20, z: 0}
   DoRandom: 0
   attacks:
   - AttackPrefab: {fileID: 5036250185869414807, guid: 7e056b80f6018234e9df5784922b27be, type: 3}

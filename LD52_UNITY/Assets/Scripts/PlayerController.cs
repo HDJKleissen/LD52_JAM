@@ -8,10 +8,6 @@ public abstract class PlayerController : MonoBehaviour
 
     protected Vector2 Movement;
     
-    public void Start()
-    {
-    }
-
     public abstract void HandleMovementPress(Vector2 input);
     public abstract void HandleMovementHeld(Vector2 input);
     public abstract void HandleMovementRelease(Vector2 lastInput);
@@ -20,11 +16,6 @@ public abstract class PlayerController : MonoBehaviour
     public abstract void HandleActionPress();
 
     public abstract void HandleActionRelease();
-
-    private void Update()
-    {
-        
-    }
 
     private void FixedUpdate()
     {
