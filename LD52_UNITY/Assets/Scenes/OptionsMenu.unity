@@ -554,7 +554,7 @@ GameObject:
   - component: {fileID: 493999228}
   - component: {fileID: 493999231}
   - component: {fileID: 493999230}
-  - component: {fileID: 493999229}
+  - component: {fileID: 493999232}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -588,18 +588,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 174}
   m_SizeDelta: {x: 400, y: 400}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &493999229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 493999227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 212cee8651ca2e84eabeade8ab1165dc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &493999230
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,6 +622,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 493999227}
   m_CullTransparentMesh: 1
+--- !u!114 &493999232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 493999227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd7a0db837615341bdb8d64960795b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &512190639
 GameObject:
   m_ObjectHideFlags: 0
@@ -1730,8 +1730,8 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
-    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
-    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_HighlightedColor: {r: 0.8584906, g: 0.6810714, b: 0.38470095, a: 1}
+    m_PressedColor: {r: 0.7924528, g: 0.46423766, b: 0.24296904, a: 1}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
     m_ColorMultiplier: 1
@@ -1752,7 +1752,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 493999229}
+      - m_Target: {fileID: 493999232}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
         m_MethodName: GotoScene
         m_Mode: 5
