@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   body: {fileID: 4115610211672057980}
+  pickupHandler: {fileID: 4516179875138616398}
   TurnSpeed: 0.1
   MoveSpeed: 30
   SlowdownRate: 0.05
@@ -158,7 +159,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   LizardEggPrefab: {fileID: 4498437545646606072, guid: 20f29155296fc8b428b96b9af8607620, type: 3}
+  LizardEggPickupPrefab: {fileID: 3112583886841716861, guid: 6f559777fd7967e40bb9c4f3a341452e, type: 3}
   EggHolder: {fileID: 4115610212911829613}
+  CarryingEgg: 0
 --- !u!1 &4115610212911829612
 GameObject:
   m_ObjectHideFlags: 0
