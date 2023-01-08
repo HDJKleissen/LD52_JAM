@@ -160,7 +160,7 @@ TextureImporter:
         serializedVersion: 2
         x: 1161
         y: 514
-        width: 256
+        width: 264
         height: 507
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -179,10 +179,10 @@ TextureImporter:
       name: frog_2
       rect:
         serializedVersion: 2
-        x: 119
-        y: 525
-        width: 263
-        height: 243
+        x: 123
+        y: 530
+        width: 259
+        height: 232
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -200,10 +200,10 @@ TextureImporter:
       name: frog_3
       rect:
         serializedVersion: 2
-        x: 645
-        y: 525
-        width: 276
-        height: 268
+        x: 654
+        y: 526
+        width: 267
+        height: 267
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -221,10 +221,10 @@ TextureImporter:
       name: frog_4
       rect:
         serializedVersion: 2
-        x: 1655
-        y: 525
-        width: 263
-        height: 236
+        x: 1658
+        y: 530
+        width: 260
+        height: 231
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -242,10 +242,10 @@ TextureImporter:
       name: frog_5
       rect:
         serializedVersion: 2
-        x: 119
-        y: 13
-        width: 263
-        height: 230
+        x: 122
+        y: 18
+        width: 260
+        height: 224
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -255,6 +255,27 @@ TextureImporter:
       bones: []
       spriteID: 4d9066dcbd55fdd419b84c89b07e5bbc
       internalID: 200886161
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: frog_1
+      rect:
+        serializedVersion: 2
+        x: 1798
+        y: 764
+        width: 14
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ca2bf9c87528ad43b0e5241da68dbd8
+      internalID: 317645609
       vertices: []
       indices: 
       edges: []
