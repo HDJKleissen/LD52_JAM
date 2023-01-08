@@ -8,6 +8,7 @@ public class RotateRigidbodyByMovement : MonoBehaviour
     public Rigidbody2D body;
     [Range(0, 1)]
     public float RotateSpeed = 0.3f;
+    public float RotationOffset = 90f;
 
     float DestinationRotation;
 
@@ -27,7 +28,7 @@ public class RotateRigidbodyByMovement : MonoBehaviour
     {
         if (body.velocity != Vector2.zero)
         {
-            DestinationRotation = Mathf.Atan2(body.velocity.y, body.velocity.x) * Mathf.Rad2Deg + 90f;
+            DestinationRotation = Mathf.Atan2(body.velocity.y, body.velocity.x) * Mathf.Rad2Deg + RotationOffset;
         }
 
         body.SetRotation(Mathf.LerpAngle(body.rotation, DestinationRotation, RotateSpeed));

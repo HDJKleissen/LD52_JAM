@@ -6,7 +6,7 @@ public class PlayerInputHandler : MonoBehaviour
 {
     public PlayerController controller;
 
-    Vector2 movementInput;
+    public Vector2 MovementInput { get; private set; }
     public float Deadzone;
 
 
@@ -24,20 +24,20 @@ public class PlayerInputHandler : MonoBehaviour
             newMovementInput = Vector2.zero;
         }
 
-        if (movementInput == Vector2.zero && newMovementInput != Vector2.zero)
+        if (MovementInput == Vector2.zero && newMovementInput != Vector2.zero)
         {
             controller.HandleMovementPress(newMovementInput);
         }
-        else if (movementInput != Vector2.zero && newMovementInput != Vector2.zero)
+        else if (MovementInput != Vector2.zero && newMovementInput != Vector2.zero)
         {
             controller.HandleMovementHeld(newMovementInput);
         }
-        else if (movementInput != Vector2.zero && newMovementInput == Vector2.zero)
+        else if (MovementInput != Vector2.zero && newMovementInput == Vector2.zero)
         {
-            controller.HandleMovementRelease(movementInput);
+            controller.HandleMovementRelease(MovementInput);
         }
 
-        movementInput = newMovementInput;
+        MovementInput = newMovementInput;
 
         if (Input.GetButtonDown("Action"))
         {
