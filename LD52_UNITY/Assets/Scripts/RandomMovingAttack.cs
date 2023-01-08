@@ -10,7 +10,7 @@ public class RandomMovingAttack : EnemyAttack
     public float AttackDuration;
 
     float startTime, endTime;
-    public Rectangle sprite;
+    public SpriteRenderer sprite;
 
     public override void SetupAttack(LevelController controller)
     {
