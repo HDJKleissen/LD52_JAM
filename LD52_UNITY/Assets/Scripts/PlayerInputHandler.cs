@@ -24,17 +24,17 @@ public class PlayerInputHandler : MonoBehaviour
             newMovementInput = Vector2.zero;
         }
 
-        if ((movementInput.x == 0 && newMovementInput.x != 0) || (movementInput.y == 0 && newMovementInput.y != 0))
+        if (movementInput == Vector2.zero && newMovementInput != Vector2.zero)
         {
-            controller.HandleMovementPress(newMovementInput.normalized);
+            controller.HandleMovementPress(newMovementInput);
         }
         else if (movementInput != Vector2.zero && newMovementInput != Vector2.zero)
         {
-            controller.HandleMovementHeld(newMovementInput.normalized);
+            controller.HandleMovementHeld(newMovementInput);
         }
         else if (movementInput != Vector2.zero && newMovementInput == Vector2.zero)
         {
-            controller.HandleMovementRelease(movementInput.normalized);
+            controller.HandleMovementRelease(movementInput);
         }
 
         movementInput = newMovementInput;

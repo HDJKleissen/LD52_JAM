@@ -28,7 +28,7 @@ public class MousePlayerController : PlayerController
 
     public override void HandleMovementHeld(Vector2 input)
     {
-        Movement = input * MoveSpeed * speedModifier;
+        Movement = input.normalized * MoveSpeed * speedModifier;
     }
 
     public override void HandleMovementRelease(Vector2 lastInput)
