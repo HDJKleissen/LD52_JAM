@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.02.00">
+	<object class="AudioFile" id="{72c6cd44-67c1-4c59-a77c-9a1eb39f34cb}">
+		<property name="assetPath">
+			<value>Swoop 04.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.125</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{8419b8bd-2a77-4b12-bcf7-bc90f20f40bd}</destination>
+		</relationship>
+	</object>
+</objects>
