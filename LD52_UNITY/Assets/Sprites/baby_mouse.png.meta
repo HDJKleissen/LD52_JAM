@@ -158,10 +158,10 @@ TextureImporter:
       name: baby_mouse_0
       rect:
         serializedVersion: 2
-        x: 210
-        y: 650
-        width: 92
-        height: 237
+        x: 214
+        y: 653
+        width: 86
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -180,9 +180,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 717
-        y: 661
+        y: 659
         width: 88
-        height: 175
+        height: 207
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -201,9 +201,9 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 209
-        y: 137
+        y: 144
         width: 92
-        height: 238
+        height: 257
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
