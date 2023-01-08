@@ -6,6 +6,8 @@ public class PlayerFrogController : PlayerController
 {
     public Transform LandingTarget;
 
+    public Animator Animator;
+
     public AnimationCurve VelocityCurve;
     public float JumpTime;
     public float MoveCooldown;
@@ -48,6 +50,7 @@ public class PlayerFrogController : PlayerController
 
             jumpDirection = cardinalizedDirection.normalized;
             LandingTarget.gameObject.SetActive(true);
+            Animator.SetTrigger("JumpPrep");
         }
     }
 
@@ -75,6 +78,7 @@ public class PlayerFrogController : PlayerController
                 jumpStrength = 0;
                 jumpDirection = cardinalizedDirection.normalized;
                 LandingTarget.gameObject.SetActive(true);
+                Animator.SetTrigger("JumpPrep");
             }
 
             if ((jumpDirection.x != 0 && Mathf.Sign(jumpDirection.x) != Mathf.Sign(cardinalizedDirection.x))
@@ -83,13 +87,15 @@ public class PlayerFrogController : PlayerController
                 moving = true;
                 LandingTarget.gameObject.SetActive(false);
                 LandingTarget.localPosition = Vector2.zero;
+                Animator.SetTrigger("Jump");
                 StartCoroutine(MoveTo(jumpDirection * jumpStrength));
             }
 
             jumpStrength += MaxJumpStrength / (FullJumpChargeTime * (1 + frogsCarried * 0.1f)) * Time.deltaTime;
             jumpStrength = Mathf.Clamp(jumpStrength, 0, MaxJumpStrength);
 
-            LandingTarget.localPosition = jumpStrength * jumpDirection;
+            LandingTarget.localPosition = jumpStrength * Vector2.up;
+            body.SetRotation(Mathf.Atan2(jumpDirection.y, jumpDirection.x) * Mathf.Rad2Deg -90f);
         }
     }
 
@@ -100,13 +106,14 @@ public class PlayerFrogController : PlayerController
         LandingTarget.gameObject.SetActive(false);
         LandingTarget.localPosition = Vector2.zero;
         StartCoroutine(MoveTo(jumpDirection * jumpStrength));
+        Animator.SetTrigger("Jump");
     }
 
     IEnumerator MoveTo(Vector2 destination)
     {
         Vector2 startPosition = body.position;
         Vector2 endPosition = body.position + destination;
-
+        // SFX: Jump Hop
         float time = 0;
         while (time <= JumpTime)
         {
@@ -118,6 +125,8 @@ public class PlayerFrogController : PlayerController
 
         jumpStrength = 0;
         jumpDirection = Vector2.zero;
+        Animator.SetTrigger("JumpFinish");
+        // SFX: Jump Land
         yield return new WaitForSeconds(MoveCooldown * (1 - 0.1f * frogsCarried));
 
         moving = false;

@@ -31,6 +31,7 @@ public class RandomMovingAttack : EnemyAttack
     {
         startTime = Time.time;
         endTime = startTime + AttackDuration;
+        // SFX: Combine start
         sprite.enabled = true;
     }
 
@@ -43,6 +44,7 @@ public class RandomMovingAttack : EnemyAttack
             transform.position = Vector2.Lerp(startPosition, endPosition, (Time.time - startTime) / AttackDuration);
             if (Time.time > endTime)
             {
+                // SFX: Combine end
                 HandleAttackEnd();
             }
         }
