@@ -13,6 +13,16 @@ public class BabyFrogPickup : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("OW");
+        if (collision.GetComponent<EnemyAttack>() != null)
+        {
+            Debug.Log("I'm DEAD!");
+            Destroy(gameObject);
+        }
     }
 }
