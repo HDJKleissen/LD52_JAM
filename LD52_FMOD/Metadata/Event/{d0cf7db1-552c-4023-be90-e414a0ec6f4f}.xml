@@ -57,7 +57,14 @@
 			<destination>{2bd2b055-50b0-48c5-8128-0247dc649d03}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{0b22ce9f-1ef2-4d99-ad94-2303cfbf5ace}" />
+	<object class="EventAutomatableProperties" id="{0b22ce9f-1ef2-4d99-ad94-2303cfbf5ace}">
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{022fecce-74e7-42d9-a306-c71920ad4547}" />
 	<object class="GroupTrack" id="{f13780e6-2409-4bb3-80b0-af1796151446}">
 		<relationship name="modules">
@@ -164,7 +171,7 @@
 	<object class="MixerBusEffectChain" id="{75197817-35f7-42d8-9f57-2f2b806b250b}">
 		<relationship name="effects">
 			<destination>{976f7b7e-9f07-405c-b305-bdb8d8abe81f}</destination>
-			<destination>{e1978632-89e3-4949-841d-799311b90ebe}</destination>
+			<destination>{4dc41f76-0850-46f1-8261-e16a0407e896}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{268d1571-e22b-4661-900a-7630ab363ef9}" />
@@ -249,7 +256,26 @@
 	</object>
 	<object class="MixerBusPanner" id="{65231991-9096-40f8-8e1b-51e14b592a67}" />
 	<object class="MixerBusFader" id="{976f7b7e-9f07-405c-b305-bdb8d8abe81f}" />
-	<object class="SpatialiserEffect" id="{e1978632-89e3-4949-841d-799311b90ebe}" />
+	<object class="SpatialiserEffect" id="{4dc41f76-0850-46f1-8261-e16a0407e896}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>9</value>
+		</property>
+		<property name="minimumExtent">
+			<value>160</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{9ba26fef-aad0-4296-818f-bd439374ceb1}" />
 	<object class="MixerBusFader" id="{91f6a753-f7c8-4642-b4b4-9fd727ef9518}" />
 </objects>
