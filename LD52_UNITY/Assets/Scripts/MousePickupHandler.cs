@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MousePickupHandler : MonoBehaviour
 {
     public GameObject BabyMousePrefab;
     public FollowTarget followTarget;
-
+    
     // Start is called before the first frame update
     void Start()
     {
@@ -40,7 +41,18 @@ public class MousePickupHandler : MonoBehaviour
             // TODO: Move to seperate class and attach level end
             // SFX: Player mouse death
             FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDeathMouse", gameObject);
-            Destroy(gameObject);
+
+            int score = MiceAmount();
+            if (score > PlayerPrefs.GetInt("MouseScore",0))
+            {
+                PlayerPrefs.SetInt("MouseScore", score);
+            }
+            SceneManager.LoadScene("LevelSelect");
         }
+    }
+
+    public int MiceAmount()
+    {
+        return FindObjectsOfType<BabyMouse>().Length;
     }
 }

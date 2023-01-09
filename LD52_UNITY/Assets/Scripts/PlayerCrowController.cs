@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Shapes;
+using UnityEngine.SceneManagement;
 
 public class PlayerCrowController : PlayerController
 {
@@ -117,7 +118,12 @@ public class PlayerCrowController : PlayerController
                 // SFX: Player crow death
                 FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDeathCrow", gameObject);
 
-                Destroy(gameObject);
+                int score = GetScore();
+                if (score > PlayerPrefs.GetInt("CrowScore"))
+                {
+                    PlayerPrefs.SetInt("CrowScore", score);
+                }
+                SceneManager.LoadScene("LevelSelect");
             }
             else if (collision.GetComponent<CrowShinyPickup>() != null)
             {
@@ -127,5 +133,10 @@ public class PlayerCrowController : PlayerController
                 Destroy(collision.gameObject);
             }
         }
+    }
+
+    public override int GetScore()
+    {
+        return ShiniesPickedUp;
     }
 }

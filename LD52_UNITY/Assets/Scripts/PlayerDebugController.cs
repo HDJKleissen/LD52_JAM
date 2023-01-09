@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class PlayerDebugController : PlayerController
 {
+    public override int GetScore()
+    {
+        return 0;
+    }
+
     public override void HandleActionHeld()
     {
         Debug.Log("Action held");

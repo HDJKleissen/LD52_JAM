@@ -139,4 +139,9 @@ public class PlayerFrogController : PlayerController
     {
         Gizmos.DrawSphere((Vector2)transform.position + (jumpDirection * jumpStrength), 1);
     }
+
+    public override int GetScore()
+    {
+        return frogsCarried;
+    }
 }

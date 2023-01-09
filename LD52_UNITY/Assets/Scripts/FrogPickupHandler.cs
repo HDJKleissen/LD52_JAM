@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class FrogPickupHandler : MonoBehaviour
 {
@@ -37,7 +38,12 @@ public class FrogPickupHandler : MonoBehaviour
             // TODO: Move to seperate class and attach level end
             // SFX: Frog player death
             FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDeathFrog", gameObject);
-            Destroy(gameObject);
-        }
+
+            int score = frogController.GetScore();
+            if (score > PlayerPrefs.GetInt("FrogScore",0))
+            {
+                PlayerPrefs.SetInt("FrogScore", score);
+            }
+            SceneManager.LoadScene("LevelSelect");        }
     }
 }

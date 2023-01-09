@@ -8,6 +8,7 @@ public class MousePlayerController : PlayerController
     public FollowTarget FollowTarget;
     public float MoveSpeed = 8f;
     float speedModifier = 1;
+    public MousePickupHandler mousePickupHandler;
     public override void HandleActionHeld()
     {
     }
@@ -36,5 +37,10 @@ public class MousePlayerController : PlayerController
     {
         Movement = Vector2.zero;
         PlayerAnimator.SetAnimatorBool("Running", false);
+    }
+
+    public override int GetScore()
+    {
+        return mousePickupHandler.MiceAmount();
     }
 }

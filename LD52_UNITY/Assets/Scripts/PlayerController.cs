@@ -21,4 +21,6 @@ public abstract class PlayerController : MonoBehaviour
     {
         body.velocity = Movement;
     }
+
+    public abstract int GetScore();
 }

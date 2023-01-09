@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LizardPickupHandler : MonoBehaviour
 {
@@ -53,7 +54,12 @@ public class LizardPickupHandler : MonoBehaviour
             // SFX: Lizard player death
             FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDeathLizard", gameObject);
 
-            Destroy(gameObject);
+            int score = FindObjectOfType<EggDrop>().eggs;
+            if (score > PlayerPrefs.GetInt("LizardScore",0))
+            {
+                PlayerPrefs.SetInt("LizardScore", score);
+            }
+            SceneManager.LoadScene("LevelSelect");
         }
     }
 }

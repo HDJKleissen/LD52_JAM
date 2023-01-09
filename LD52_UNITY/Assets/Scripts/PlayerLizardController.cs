@@ -8,6 +8,7 @@ public class PlayerLizardController : PlayerController
     public float MoveSpeed;
     public float SlowdownRate;
     Vector2 storedInput;
+    public EggDrop eggDrop;
 
     public override void HandleActionHeld()
     {
@@ -50,5 +51,10 @@ public class PlayerLizardController : PlayerController
     public void Start()
     {
         animator.speed = 0;
+    }
+
+    public override int GetScore()
+    {
+        return eggDrop.eggs;
     }
 }
