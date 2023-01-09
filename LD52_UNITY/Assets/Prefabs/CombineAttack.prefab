@@ -311,6 +311,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AttackDuration: 6
   sprite: {fileID: 930606689971915942}
+  IsCombine: 1
 --- !u!61 &4767830455569175613
 BoxCollider2D:
   m_ObjectHideFlags: 0

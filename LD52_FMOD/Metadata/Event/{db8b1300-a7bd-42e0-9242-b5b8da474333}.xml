@@ -5,7 +5,7 @@
 			<value>UIBack</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{217ef89b-c4a4-40df-9591-6a3875191214}</destination>
@@ -91,6 +91,9 @@
 	<object class="SingleSound" id="{99971c87-9949-47c1-8786-26aed531fef9}">
 		<property name="length">
 			<value>0.41016666666666668</value>
+		</property>
+		<property name="volume">
+			<value>-7.5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{23aa3dee-2406-479d-a165-9dfd6d8f3649}</destination>
