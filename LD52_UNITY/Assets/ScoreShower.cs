@@ -6,7 +6,7 @@ using TMPro;
 public class ScoreShower : MonoBehaviour
 {
     public string ScoreName;
-    public TextMeshPro scoreText;
+    public TextMeshProUGUI scoreText;
     // Start is called before the first frame update
     void Start()
     {
