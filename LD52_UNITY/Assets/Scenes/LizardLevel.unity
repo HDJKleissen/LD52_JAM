@@ -2375,7 +2375,7 @@ GameObject:
   - component: {fileID: 840754648}
   - component: {fileID: 840754647}
   m_Layer: 0
-  m_Name: Disc
+  m_Name: EggDrop
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

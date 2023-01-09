@@ -27,12 +27,12 @@ public class LizardPickupHandler : MonoBehaviour
     public void DropEgg()
     {
         // SFX: Place egg sound
+        Destroy(egg);
+        CarryingEgg = false;
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/EggDrop", gameObject);
         LizardEggPickup pickup = Instantiate(LizardEggPickupPrefab).GetComponent<LizardEggPickup>();
         pickup.transform.position = transform.position;
         pickup.pickupable = false;
-        Destroy(egg);
-        CarryingEgg = false;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

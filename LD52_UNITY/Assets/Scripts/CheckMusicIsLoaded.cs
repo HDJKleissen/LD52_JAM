@@ -16,7 +16,7 @@ public class CheckMusicIsLoaded : MonoBehaviour
         {
             StartCoroutine(CoroutineHelper.Chain(
                 CoroutineHelper.WaitUntil(() => FMODUnity.RuntimeManager.HasBankLoaded("Master")),
-                CoroutineHelper.Do(() => SceneManager.LoadScene("MainMenu"))
+                CoroutineHelper.DelaySeconds(() => SceneManager.LoadScene("MainMenu"),0.1f)
             ));
         }
     }
