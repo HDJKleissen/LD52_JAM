@@ -8,12 +8,22 @@ public class MainMenuSetMusic : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        MusicPlayer.SetMenu(true);
+        SetMusicIsMenu(true);
     }
 
     // Update is called once per frame
     void Update()
     {
         
+    }
+
+    public void SetMusicIsMenu(bool value)
+    {
+        if(MusicPlayer == null)
+        {
+            MusicPlayer = FindObjectOfType<MusicPlayer>();
+        }
+        MusicPlayer.SetMenu(value);
+
     }
 }

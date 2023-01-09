@@ -231,9 +231,9 @@ MonoBehaviour:
           m_StringArgument: LevelSelect
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1446663858101060115}
-        m_TargetAssemblyTypeName: MusicPlayer, Assembly-CSharp
-        m_MethodName: SetMenu
+      - m_Target: {fileID: 2105334805}
+        m_TargetAssemblyTypeName: MainMenuSetMusic, Assembly-CSharp
+        m_MethodName: SetMusicIsMenu
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerInputHandler : MonoBehaviour
 {
@@ -50,6 +51,11 @@ public class PlayerInputHandler : MonoBehaviour
         if (Input.GetButtonUp("Action"))
         {
             controller.HandleActionRelease();
+        }
+
+        if (Input.GetButtonUp("Pause"))
+        {
+            SceneManager.LoadScene("LevelSelect");
         }
     }
 }
