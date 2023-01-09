@@ -22,5 +22,7 @@ public class Cactus : MonoBehaviour
         DeadCactus.SetActive(true);
         AliveCactus.SetActive(false);
         // SFX: Cactus break
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/CactusFall", gameObject);
+
     }
 }
