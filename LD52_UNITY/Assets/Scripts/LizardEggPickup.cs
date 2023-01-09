@@ -32,6 +32,7 @@ public class LizardEggPickup : MonoBehaviour
                 eggDrop.eggs++;
                 Destroy(gameObject);
                 // SFX: Egg success~!
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Pickup", gameObject);
             }
         }
     }
