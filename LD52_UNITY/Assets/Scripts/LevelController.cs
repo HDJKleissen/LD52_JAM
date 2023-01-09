@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class LevelController : MonoBehaviour
 {
-    public Bounds LevelBounds;
+    public Bounds LevelBounds, PickupSpawnBounds;
 
     public bool DoRandom = false;
 
     public List<AttackWithDelay> attacks = new List<AttackWithDelay>();
+    public GameObject PickupPrefab;
+    public float MinPickupSpawnDelay, MaxPickupSpawnDelay;
 
     // Start is called before the first frame update
     void Start()
@@ -18,11 +20,25 @@ public class LevelController : MonoBehaviour
         {
             StartCoroutine(Attacks());
         }
+        if(PickupPrefab != null)
+        {
+
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
+    }
+
+    IEnumerator SpawnPickups()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(UnityEngine.Random.Range(MinPickupSpawnDelay, MaxPickupSpawnDelay));
+            GameObject go = Instantiate(PickupPrefab);
+            go.transform.position = new Vector2(UnityEngine.Random.Range(PickupSpawnBounds.min.x, PickupSpawnBounds.max.x), UnityEngine.Random.Range(PickupSpawnBounds.min.y, PickupSpawnBounds.max.y));
+        }
     }
 
     IEnumerator Attacks()
@@ -43,7 +59,8 @@ public class LevelController : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
-        DrawBounds(LevelBounds);    
+        DrawBounds(PickupSpawnBounds);
+        DrawBounds(LevelBounds);
     }
 
     void DrawBounds(Bounds b, float delay = 0)
