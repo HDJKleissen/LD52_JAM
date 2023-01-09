@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4086236149593795677}
   - component: {fileID: 8483711479590909641}
   - component: {fileID: 2666864599969059937}
+  - component: {fileID: 3253124963886113039}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -105,6 +106,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &3253124963886113039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4783520439711072741}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e1803675b8d4ac5ac4e2db1f60422e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6550898617265905935
 GameObject:
   m_ObjectHideFlags: 0
@@ -117,6 +130,7 @@ GameObject:
   - component: {fileID: 364264053007165976}
   - component: {fileID: 2000060247449479335}
   - component: {fileID: 3952784191685268056}
+  - component: {fileID: -6113706063967488078}
   m_Layer: 0
   m_Name: Harvey
   m_TagString: Untagged
@@ -138,7 +152,7 @@ Transform:
   m_Children:
   - {fileID: 4086236149593795677}
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &364264053007165976
 MonoBehaviour:
@@ -216,3 +230,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 2
+--- !u!114 &-6113706063967488078
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6550898617265905935}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 782fb77a9efbc4ce2a0c14ccf21fd4cb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShortestTimeBetweenBarks: 8
+  LongestTimeBetweenBarks: 16
