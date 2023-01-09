@@ -5,7 +5,7 @@
 			<value>UICaw</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{217ef89b-c4a4-40df-9591-6a3875191214}</destination>
@@ -91,6 +91,9 @@
 	<object class="MultiSound" id="{ed0e7671-ca42-4d34-bbcf-0870994d5a7d}">
 		<property name="length">
 			<value>0.53125</value>
+		</property>
+		<property name="volume">
+			<value>-6.5</value>
 		</property>
 		<relationship name="sounds">
 			<destination>{d3ba1abd-956e-4e74-98d1-3066596e840d}</destination>
