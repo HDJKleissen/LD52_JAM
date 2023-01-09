@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class HarveyBarks : MonoBehaviour
 {
-    [SerializeField] float ShortestTimeBetweenBarks = 8f;
-    [SerializeField] float LongestTimeBetweenBarks = 16f;
+    [SerializeField] float ShortestTimeBetweenBarks = 14f;
+    [SerializeField] float LongestTimeBetweenBarks = 22f;
 
     // Start is called before the first frame update
     void Start()
