@@ -36,6 +36,7 @@ public class MousePickupHandler : MonoBehaviour
         if (collision.GetComponent<EnemyAttack>() != null)
         {
             // TODO: Move to seperate class and attach level end
+            // SFX: Player mouse death
             Destroy(gameObject);
         }
     }

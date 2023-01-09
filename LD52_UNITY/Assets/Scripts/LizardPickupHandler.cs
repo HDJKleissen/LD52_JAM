@@ -25,6 +25,7 @@ public class LizardPickupHandler : MonoBehaviour
 
     public void DropEgg()
     {
+        // SFX: Place egg sound
         LizardEggPickup pickup = Instantiate(LizardEggPickupPrefab).GetComponent<LizardEggPickup>();
         pickup.transform.position = transform.position;
         pickup.pickupable = false;
@@ -43,10 +44,12 @@ public class LizardPickupHandler : MonoBehaviour
             CarryingEgg = true;
 
             Destroy(eggPickup.gameObject);
+            // SFX: Pickup egg sound
         }
         if (collision.GetComponent<EnemyAttack>() != null)
         {
             // TODO: Move to seperate class and attach level end
+            // SFX: Lizard player death
             Destroy(gameObject);
         }
     }

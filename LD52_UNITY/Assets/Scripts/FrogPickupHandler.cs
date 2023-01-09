@@ -29,10 +29,12 @@ public class FrogPickupHandler : MonoBehaviour
             frog.transform.localPosition = new Vector2(Random.Range(-.4f, .4f), Random.Range(-.8f, -.1f));
             frogController.frogsCarried++;
             Destroy(frogPickup.gameObject);
+            // SFX: Baby frog pickup sound
         }
         if (collision.GetComponent<EnemyAttack>() != null)
         {
             // TODO: Move to seperate class and attach level end
+            // SFX: Frog player death
             Destroy(gameObject);
         }
     }

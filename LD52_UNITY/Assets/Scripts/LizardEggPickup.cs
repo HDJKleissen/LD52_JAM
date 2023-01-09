@@ -16,6 +16,14 @@ public class LizardEggPickup : MonoBehaviour
     {
         
     }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.GetComponent<EnemyAttack>() != null)
+        {
+            Destroy(gameObject);
+            // SFX: Egg break
+        }
+    }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
