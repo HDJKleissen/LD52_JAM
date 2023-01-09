@@ -16,7 +16,6 @@ public class RandomMovingAttack : EnemyAttack
 
     private void Start()
     {
-        combineSound = FMODUnity.RuntimeManager.CreateInstance("event:/Combine");
     }
 
     public override void SetupAttack(LevelController controller)
@@ -39,8 +38,10 @@ public class RandomMovingAttack : EnemyAttack
         startTime = Time.time;
         endTime = startTime + AttackDuration;
         // SFX: Combine start
+        combineSound = FMODUnity.RuntimeManager.CreateInstance("event:/Combine");
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(combineSound, transform);
         combineSound.start();
+        combineSound.release();
         sprite.enabled = true;
     }
 

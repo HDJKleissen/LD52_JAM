@@ -57,6 +57,9 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{17ff4bb0-950b-45c2-8480-98af534a82c1}">
+		<property name="dopplerEnabled">
+			<value>true</value>
+		</property>
 		<property name="minimumDistance">
 			<value>5</value>
 		</property>
@@ -82,6 +85,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{93ada661-800c-44b8-91db-50156f4b6998}">
+		<property name="volume">
+			<value>-9</value>
+		</property>
 		<relationship name="modulators">
 			<destination>{d3407afd-bfa5-453b-a985-602cbbcf2f66}</destination>
 			<destination>{3eb238f8-a3fd-40d9-8f84-c2602c756c6e}</destination>
@@ -222,7 +228,7 @@
 			<value>9</value>
 		</property>
 		<property name="minimumExtent">
-			<value>160</value>
+			<value>218</value>
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{c1fad365-f72b-47e4-aa7c-fa2d14b6e827}">
