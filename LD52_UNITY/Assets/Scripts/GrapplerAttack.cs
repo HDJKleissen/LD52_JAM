@@ -21,6 +21,8 @@ public class GrapplerAttack : EnemyAttack
         startTime = Time.time;
         endTime = startTime + WindupTime;
         // SFX: Grapple go down sound?
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/GrapplerDown", gameObject);
+
     }
 
     // Start is called before the first frame update
@@ -42,6 +44,7 @@ public class GrapplerAttack : EnemyAttack
         if(Time.time > endTime)
         {
             // SFX: Grapple close sound
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/GrapplerClose", gameObject);
             damageCollider.enabled = true;
         }
     }
