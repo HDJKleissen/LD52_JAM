@@ -24,6 +24,7 @@ public class BabyFrogPickup : MonoBehaviour
             Debug.Log("I'm DEAD!");
             Destroy(gameObject);
             // SFX: Baby frog death
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BabyDeathFrog", gameObject);
         }
     }
 }

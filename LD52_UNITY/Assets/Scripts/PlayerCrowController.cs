@@ -28,6 +28,9 @@ public class PlayerCrowController : PlayerController
         if (!swooping)
         {
             // SFX: Crow swoop sound
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/CrowSwoop", gameObject);
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Caw", gameObject);
+
             StartCoroutine(Swoop());
         }
     }
@@ -111,11 +114,14 @@ public class PlayerCrowController : PlayerController
             {
                 // TODO: Move to seperate class and attach level end
                 // SFX: Player crow death
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDeathCrow", gameObject);
+
                 Destroy(gameObject);
             }
             else if (collision.GetComponent<CrowShinyPickup>() != null)
             {
                 // SFX: Shiny pickup
+                FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PickupCrow", gameObject);
                 ShiniesPickedUp++;
                 Destroy(collision.gameObject);
             }
