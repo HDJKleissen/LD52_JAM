@@ -87,6 +87,7 @@ public class PlayerCrowController : PlayerController
     void Start()
     {
         shadowColor = Shadow.Color;
+        Movement = Vector2.up;
     }
 
     // Update is called once per frame

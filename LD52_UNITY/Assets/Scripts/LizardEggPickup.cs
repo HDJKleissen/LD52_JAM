@@ -24,6 +24,16 @@ public class LizardEggPickup : MonoBehaviour
             // SFX: Egg break
             FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BabyDeathLizard", gameObject);
         }
+        else
+        {
+            EggDrop eggDrop = collision.GetComponent<EggDrop>();
+            if(eggDrop != null)
+            {
+                eggDrop.eggs++;
+                Destroy(gameObject);
+                // SFX: Egg success~!
+            }
+        }
     }
 
     private void OnTriggerExit2D(Collider2D collision)

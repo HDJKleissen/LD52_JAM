@@ -22,7 +22,7 @@ public class LevelController : MonoBehaviour
         }
         if(PickupPrefab != null)
         {
-
+            StartCoroutine(SpawnPickups());
         }
     }
 
@@ -48,7 +48,6 @@ public class LevelController : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(UnityEngine.Random.Range(attacks[attackCounter].MinAttackDelay, attacks[attackCounter].MaxAttackDelay));
-            Debug.Log("Attack " + attackCounter);
             EnemyAttack attack = Instantiate(attacks[attackCounter].AttackPrefab.GetComponent<EnemyAttack>());
             attack.SetupAttack(this);
             attack.StartAttack(this);
