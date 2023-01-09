@@ -36,19 +36,14 @@ public class GrapplerAttack : EnemyAttack
     // Update is called once per frame
     void Update()
     {
-        if (damageCollider.enabled == true && !goingUp)
-        {
-            // SFX: Grapple go up sound?
-            damageCollider.enabled = false;
-            goingUp = true;
-            StartCoroutine(GrappleLeave());
-        }
         grapple.color = Color.Lerp(new Color(0,0,0,0), new Color(1,1,1,1), 1-((endTime - Time.time) / WindupTime));
 
         if(Time.time > endTime && !goingUp)
         {
             grapple.sprite = ClosedSprite;
             damageCollider.enabled = true;
+            goingUp = true;
+            StartCoroutine(GrappleLeave());
         }
     }
 
@@ -56,7 +51,8 @@ public class GrapplerAttack : EnemyAttack
     {
         float alpha = 1;
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/GrapplerClose", gameObject);
-
+        yield return new WaitForFixedUpdate();
+        damageCollider.enabled = false;
         while (alpha > 0)
         {
             grapple.color = new Color(1, 1, 1, Mathf.Clamp01(alpha));
