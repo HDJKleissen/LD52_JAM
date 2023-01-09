@@ -1669,3 +1669,64 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7636a326ac0fc437ba4955f869c5068f, type: 3}
+--- !u!1001 &5768000973457357454
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352779, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5768000973598352781, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
+      propertyPath: m_Name
+      value: Ambience Player
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a028df91ac00f42a286320a4f6b91495, type: 3}
