@@ -57,6 +57,9 @@
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{93a28cdd-006a-4f63-8d46-e751eb1a0c83}">
+		<property name="voiceStealing">
+			<value>3</value>
+		</property>
 		<property name="minimumDistance">
 			<value>5</value>
 		</property>
@@ -79,6 +82,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{967d70cd-f203-4889-bbba-64411a762631}">
+		<property name="volume">
+			<value>-10</value>
+		</property>
 		<relationship name="effectChain">
 			<destination>{c235d0ff-19b6-4969-b80c-02191fd5163d}</destination>
 		</relationship>
@@ -113,7 +119,7 @@
 	</object>
 	<object class="EventMixerGroup" id="{8854b614-b474-48b3-bd31-1b5639ee2321}">
 		<property name="volume">
-			<value>-14.5</value>
+			<value>-6</value>
 		</property>
 		<property name="name">
 			<value>Audio 1</value>
@@ -198,10 +204,10 @@
 			<value>1</value>
 		</property>
 		<property name="soundSize">
-			<value>9</value>
+			<value>7</value>
 		</property>
 		<property name="minimumExtent">
-			<value>160</value>
+			<value>232</value>
 		</property>
 	</object>
 	<object class="MixerBusFader" id="{4bb6b1ae-381a-467d-87a8-02b8c1af0bfa}" />
