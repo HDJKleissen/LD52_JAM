@@ -56,7 +56,14 @@
 			<destination>{2bd2b055-50b0-48c5-8128-0247dc649d03}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{17ff4bb0-950b-45c2-8480-98af534a82c1}" />
+	<object class="EventAutomatableProperties" id="{17ff4bb0-950b-45c2-8480-98af534a82c1}">
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{1a4afee4-3b8d-4ad8-a2bf-cb8d499219f5}" />
 	<object class="GroupTrack" id="{a20416d6-fd48-49a6-bd53-39dbed5ea12f}">
 		<relationship name="automationTracks">
@@ -155,7 +162,7 @@
 	<object class="MixerBusEffectChain" id="{f2d4ee9b-a6ae-4fa9-9994-b0e53060e849}">
 		<relationship name="effects">
 			<destination>{77944c8f-2ccf-47e0-a3fb-51402db6020d}</destination>
-			<destination>{05caab2a-6bbd-44e3-9186-cef114924cda}</destination>
+			<destination>{f7857831-322c-45de-a682-dbdbabeefff1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{75f10135-c7d7-4fad-ab52-1e499da57a00}" />
@@ -198,7 +205,26 @@
 	</object>
 	<object class="MixerBusPanner" id="{f2407f19-b659-46f0-9341-5a5f8d8b40f1}" />
 	<object class="MixerBusFader" id="{77944c8f-2ccf-47e0-a3fb-51402db6020d}" />
-	<object class="SpatialiserEffect" id="{05caab2a-6bbd-44e3-9186-cef114924cda}" />
+	<object class="SpatialiserEffect" id="{f7857831-322c-45de-a682-dbdbabeefff1}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>9</value>
+		</property>
+		<property name="minimumExtent">
+			<value>160</value>
+		</property>
+	</object>
 	<object class="AutomationCurve" id="{c1fad365-f72b-47e4-aa7c-fa2d14b6e827}">
 		<relationship name="parameter">
 			<destination>{26d191fa-e115-4e6d-a999-84d43f3e5bd0}</destination>

@@ -57,7 +57,14 @@
 			<destination>{2bd2b055-50b0-48c5-8128-0247dc649d03}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{ca3cfb52-a02a-448e-a1cc-7367eb882dc4}" />
+	<object class="EventAutomatableProperties" id="{ca3cfb52-a02a-448e-a1cc-7367eb882dc4}">
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{1a289cea-7308-467c-8e02-e17230907b44}" />
 	<object class="GroupTrack" id="{c192d871-4f01-494c-a331-94b1db86771e}">
 		<relationship name="modules">
@@ -162,7 +169,7 @@
 	<object class="MixerBusEffectChain" id="{842b4a86-3fe9-4d32-8557-619dbac2983b}">
 		<relationship name="effects">
 			<destination>{010e87c5-277f-445f-8870-ed61d10413d2}</destination>
-			<destination>{a3f6b96a-d62e-431b-b066-ed411429c2e0}</destination>
+			<destination>{d180e126-f6be-406e-8492-dfe558e9310a}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6ff0a290-881d-4995-9ecf-9a4abe941044}" />
@@ -255,7 +262,26 @@
 	</object>
 	<object class="MixerBusPanner" id="{14251c40-34ab-41d0-9174-0e393bc112e1}" />
 	<object class="MixerBusFader" id="{010e87c5-277f-445f-8870-ed61d10413d2}" />
-	<object class="SpatialiserEffect" id="{a3f6b96a-d62e-431b-b066-ed411429c2e0}" />
+	<object class="SpatialiserEffect" id="{d180e126-f6be-406e-8492-dfe558e9310a}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>9</value>
+		</property>
+		<property name="minimumExtent">
+			<value>160</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{2b53513f-c70b-4298-afd8-34ca5c23b15e}" />
 	<object class="MixerBusFader" id="{f7955836-70b6-4b50-ab9c-670f6dbf1bad}" />
 </objects>

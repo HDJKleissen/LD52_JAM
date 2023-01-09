@@ -57,7 +57,14 @@
 			<destination>{2bd2b055-50b0-48c5-8128-0247dc649d03}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{206ff8d4-2379-4ce0-98ce-93aec0ea6d23}" />
+	<object class="EventAutomatableProperties" id="{206ff8d4-2379-4ce0-98ce-93aec0ea6d23}">
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{1b4edb57-6c13-4a75-9116-66004b4d56bc}" />
 	<object class="GroupTrack" id="{0cefeca8-4898-479e-8572-314dc9387164}">
 		<relationship name="modules">
@@ -160,7 +167,7 @@
 	<object class="MixerBusEffectChain" id="{33199148-bd77-45ef-acc2-91e9e8dbfcbc}">
 		<relationship name="effects">
 			<destination>{49365e94-9a68-4c44-a65f-a2c41589e5c6}</destination>
-			<destination>{1e533501-debd-4892-a011-d343f0f8c1c0}</destination>
+			<destination>{875199a6-d125-4895-86ad-e70e142f5bd3}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{6ecd62ea-11be-4d8b-add9-be92dba18812}" />
@@ -246,7 +253,26 @@
 	</object>
 	<object class="MixerBusPanner" id="{aad370b0-1091-4c63-b6ce-841167f15bef}" />
 	<object class="MixerBusFader" id="{49365e94-9a68-4c44-a65f-a2c41589e5c6}" />
-	<object class="SpatialiserEffect" id="{1e533501-debd-4892-a011-d343f0f8c1c0}" />
+	<object class="SpatialiserEffect" id="{875199a6-d125-4895-86ad-e70e142f5bd3}">
+		<property name="distanceRolloffType">
+			<value>1</value>
+		</property>
+		<property name="minimumDistance">
+			<value>5</value>
+		</property>
+		<property name="maximumDistance">
+			<value>70</value>
+		</property>
+		<property name="extentMode">
+			<value>1</value>
+		</property>
+		<property name="soundSize">
+			<value>9</value>
+		</property>
+		<property name="minimumExtent">
+			<value>160</value>
+		</property>
+	</object>
 	<object class="MixerBusFader" id="{420eaf2c-ee73-40b6-9e4a-11c0c1d8cc08}" />
 	<object class="MixerBusFader" id="{e5660514-a872-4ad8-9bd3-ee15352a89c1}" />
 </objects>
