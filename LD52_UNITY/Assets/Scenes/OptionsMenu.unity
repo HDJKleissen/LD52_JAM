@@ -248,6 +248,7 @@ GameObject:
   - component: {fileID: 141503639}
   - component: {fileID: 141503638}
   - component: {fileID: 141503637}
+  - component: {fileID: 141503641}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -339,6 +340,18 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &141503641
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 141503636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50641f878c10648db8aa1390a704a6d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &189525137
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +475,7 @@ GameObject:
   m_Component:
   - component: {fileID: 285906370}
   - component: {fileID: 285906371}
+  - component: {fileID: 285906372}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -542,7 +556,32 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 285906372}
+        m_TargetAssemblyTypeName: BusController, Assembly-CSharp
+        m_MethodName: VolumeLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &285906372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 285906369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ae42eb2bc014ac2b09d6a43f3cdf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  busPath: SFXBus
 --- !u!1 &493999227
 GameObject:
   m_ObjectHideFlags: 0
@@ -644,6 +683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512190640}
   - component: {fileID: 512190641}
+  - component: {fileID: 512190642}
   m_Layer: 5
   m_Name: Slider (1)
   m_TagString: Untagged
@@ -724,7 +764,32 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 512190642}
+        m_TargetAssemblyTypeName: BusController, Assembly-CSharp
+        m_MethodName: VolumeLevel
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &512190642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512190639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4ae42eb2bc014ac2b09d6a43f3cdf58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  busPath: MusicBus
 --- !u!1 &584270503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1752,6 +1817,18 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 141503641}
+        m_TargetAssemblyTypeName: UISounds, Assembly-CSharp
+        m_MethodName: PlayBackSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: 493999232}
         m_TargetAssemblyTypeName: MenuButtons, Assembly-CSharp
         m_MethodName: GotoScene

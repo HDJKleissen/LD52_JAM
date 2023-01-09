@@ -26,6 +26,7 @@ public class LizardPickupHandler : MonoBehaviour
     public void DropEgg()
     {
         // SFX: Place egg sound
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/EggDrop", gameObject);
         LizardEggPickup pickup = Instantiate(LizardEggPickupPrefab).GetComponent<LizardEggPickup>();
         pickup.transform.position = transform.position;
         pickup.pickupable = false;
