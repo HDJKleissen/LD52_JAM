@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: 4115610211672057968}
   - component: {fileID: 4115610211672057969}
   - component: {fileID: 4516179875138616398}
-  - component: {fileID: 7339540952690041676}
   m_Layer: 0
   m_Name: LizardPlayer
   m_TagString: Untagged
@@ -37,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 4115610212911829613}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &4115610211672057976
 MonoBehaviour:
@@ -164,18 +163,6 @@ MonoBehaviour:
   LizardEggPickupPrefab: {fileID: 3112583886841716861, guid: 6f559777fd7967e40bb9c4f3a341452e, type: 3}
   EggHolder: {fileID: 4115610212911829613}
   CarryingEgg: 0
---- !u!114 &7339540952690041676
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4115610211672057959}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8e1803675b8d4ac5ac4e2db1f60422e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &4115610212911829612
 GameObject:
   m_ObjectHideFlags: 0
@@ -187,6 +174,7 @@ GameObject:
   - component: {fileID: 4115610212911829613}
   - component: {fileID: 4115610212911829614}
   - component: {fileID: 4115610211416537770}
+  - component: {fileID: 4338893801054929295}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -281,3 +269,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &4338893801054929295
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4115610212911829612}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e1803675b8d4ac5ac4e2db1f60422e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
