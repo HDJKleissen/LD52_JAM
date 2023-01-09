@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MusicPlayer : MonoBehaviour
+public class MusicPlayer : UnitySingleton<MusicPlayer>
 {
     FMOD.Studio.EventInstance Music;
 
@@ -10,12 +10,14 @@ public class MusicPlayer : MonoBehaviour
 
     void Start()
     {
-        //make this a singleton
+        if (Instance == this)
+        {
             Music = FMODUnity.RuntimeManager.CreateInstance("event:/Music");
             Music.start();
             Music.release();
             DontDestroyOnLoad(this);
             SetMenu(true);
+        }
     }
 
     private void Update()
