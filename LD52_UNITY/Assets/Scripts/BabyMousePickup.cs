@@ -21,6 +21,7 @@ public class BabyMousePickup : MonoBehaviour
         {
             Destroy(gameObject);
             // SFX: Baby mouse death
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BabyDeathMouse", gameObject);
         }
     }
 }

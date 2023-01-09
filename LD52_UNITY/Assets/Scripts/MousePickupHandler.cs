@@ -28,6 +28,8 @@ public class MousePickupHandler : MonoBehaviour
             BabyMouse mouse = Instantiate(BabyMousePrefab).GetComponent<BabyMouse>();
             mouse.transform.position = mousePickup.transform.position;
 
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PickupMouse", gameObject);
+
             Destroy(mousePickup.gameObject);
 
             TargetFollower follower = mouse.GetComponent<TargetFollower>();
@@ -37,6 +39,7 @@ public class MousePickupHandler : MonoBehaviour
         {
             // TODO: Move to seperate class and attach level end
             // SFX: Player mouse death
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDeathMouse", gameObject);
             Destroy(gameObject);
         }
     }

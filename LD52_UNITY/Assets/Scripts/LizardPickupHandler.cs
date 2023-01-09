@@ -50,6 +50,8 @@ public class LizardPickupHandler : MonoBehaviour
         {
             // TODO: Move to seperate class and attach level end
             // SFX: Lizard player death
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDeathLizard", gameObject);
+
             Destroy(gameObject);
         }
     }

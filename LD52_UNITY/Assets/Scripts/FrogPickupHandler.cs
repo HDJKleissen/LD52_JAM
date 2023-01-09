@@ -30,11 +30,13 @@ public class FrogPickupHandler : MonoBehaviour
             frogController.frogsCarried++;
             Destroy(frogPickup.gameObject);
             // SFX: Baby frog pickup sound
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Pickup", gameObject);
         }
         if (collision.GetComponent<EnemyAttack>() != null)
         {
             // TODO: Move to seperate class and attach level end
             // SFX: Frog player death
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/PlayerDeathFrog", gameObject);
             Destroy(gameObject);
         }
     }

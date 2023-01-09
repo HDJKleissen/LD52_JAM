@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8030988010019439119}
   - component: {fileID: 8030988010019439118}
+  - component: {fileID: 2726426770539073233}
   m_Layer: 0
   m_Name: frog_1
   m_TagString: Untagged
@@ -84,6 +85,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2726426770539073233
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8030988010019439116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8e1803675b8d4ac5ac4e2db1f60422e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8030988011288430075
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 8030988011288430068}
   LandingTarget: {fileID: 8030988011385528300}
+  Animator: {fileID: 0}
   VelocityCurve:
     serializedVersion: 2
     m_Curve:
@@ -232,6 +246,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   body: {fileID: 8030988011288430068}
   RotateSpeed: 0.3
+  RotationOffset: 90
 --- !u!70 &8030988011288430065
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

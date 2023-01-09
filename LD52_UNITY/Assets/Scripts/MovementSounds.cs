@@ -23,4 +23,9 @@ public class MovementSounds : MonoBehaviour
     {
         FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Flap", gameObject);
     }
+
+    public void PlayRibbit()
+    {
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Ribbit", gameObject);
+    }
 }

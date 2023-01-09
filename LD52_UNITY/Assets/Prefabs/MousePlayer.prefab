@@ -148,6 +148,7 @@ GameObject:
   - component: {fileID: 8589290047652658225}
   - component: {fileID: 8589290047652658238}
   - component: {fileID: 8589290047652658239}
+  - component: {fileID: 1343434742298491686}
   m_Layer: 0
   m_Name: MousePlayer
   m_TagString: Untagged
@@ -307,3 +308,17 @@ MonoBehaviour:
   body: {fileID: 8589290047652658226}
   BaseSteps: 10
   Steps: 6
+--- !u!114 &1343434742298491686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8589290047652658217}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb41b20f5c81b426089436ff7a22027f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ShortestTimeBetweenBarks: 8
+  LongestTimeBetweenBarks: 16

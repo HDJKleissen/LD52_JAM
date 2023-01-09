@@ -114,6 +114,8 @@ public class PlayerFrogController : PlayerController
         Vector2 startPosition = body.position;
         Vector2 endPosition = body.position + destination;
         // SFX: Jump Hop
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/Hop", gameObject);
+
         float time = 0;
         while (time <= JumpTime)
         {
@@ -127,6 +129,7 @@ public class PlayerFrogController : PlayerController
         jumpDirection = Vector2.zero;
         Animator.SetTrigger("JumpFinish");
         // SFX: Jump Land
+        FMODUnity.RuntimeManager.PlayOneShotAttached("event:/FrogLand", gameObject);
         yield return new WaitForSeconds(MoveCooldown * (1 - 0.1f * frogsCarried));
 
         moving = false;

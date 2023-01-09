@@ -22,6 +22,7 @@ public class LizardEggPickup : MonoBehaviour
         {
             Destroy(gameObject);
             // SFX: Egg break
+            FMODUnity.RuntimeManager.PlayOneShotAttached("event:/BabyDeathLizard", gameObject);
         }
     }
 
