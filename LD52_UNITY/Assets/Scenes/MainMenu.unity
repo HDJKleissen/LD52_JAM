@@ -219,6 +219,18 @@ MonoBehaviour:
           m_StringArgument: LevelSelect
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1446663858101060115}
+        m_TargetAssemblyTypeName: MusicPlayer, Assembly-CSharp
+        m_MethodName: SetMenu
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &48439589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1531,6 +1543,7 @@ GameObject:
   - component: {fileID: 2105334803}
   - component: {fileID: 2105334802}
   - component: {fileID: 2105334804}
+  - component: {fileID: 2105334805}
   m_Layer: 5
   m_Name: Menu
   m_TagString: Untagged
@@ -1608,6 +1621,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cdd7a0db837615341bdb8d64960795b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &2105334805
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2105334800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 60340ebd4738c7945991097889bb769c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  MusicPlayer: {fileID: 1446663858101060115}
 --- !u!1001 &1446663858101060114
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1619,6 +1645,10 @@ PrefabInstance:
     - target: {fileID: 1446663857971466288, guid: 7636a326ac0fc437ba4955f869c5068f, type: 3}
       propertyPath: m_Name
       value: Music Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1446663857971466289, guid: 7636a326ac0fc437ba4955f869c5068f, type: 3}
+      propertyPath: Menu
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1446663857971466294, guid: 7636a326ac0fc437ba4955f869c5068f, type: 3}
       propertyPath: m_RootOrder
@@ -1669,6 +1699,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7636a326ac0fc437ba4955f869c5068f, type: 3}
+--- !u!114 &1446663858101060115 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1446663857971466289, guid: 7636a326ac0fc437ba4955f869c5068f, type: 3}
+  m_PrefabInstance: {fileID: 1446663858101060114}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e11047de5314c828f323b99f87ac3c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5768000973457357454
 PrefabInstance:
   m_ObjectHideFlags: 0
