@@ -12,6 +12,13 @@ public class RandomMovingAttack : EnemyAttack
     float startTime, endTime;
     public SpriteRenderer sprite;
 
+    FMOD.Studio.EventInstance combineSound;
+
+    private void Start()
+    {
+        combineSound = FMODUnity.RuntimeManager.CreateInstance("event:/Combine");
+    }
+
     public override void SetupAttack(LevelController controller)
     {
         Bounds bounds = controller.LevelBounds;
@@ -32,6 +39,8 @@ public class RandomMovingAttack : EnemyAttack
         startTime = Time.time;
         endTime = startTime + AttackDuration;
         // SFX: Combine start
+        FMODUnity.RuntimeManager.AttachInstanceToGameObject(combineSound, transform);
+        combineSound.start();
         sprite.enabled = true;
     }
 
@@ -45,8 +54,16 @@ public class RandomMovingAttack : EnemyAttack
             if (Time.time > endTime)
             {
                 // SFX: Combine end
+                combineSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
                 HandleAttackEnd();
             }
         }
+    }
+
+    private void OnDestroy()
+    {
+        combineSound.release();
+        combineSound.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+
     }
 }
